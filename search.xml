@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="utf-8"?>
+<search>
+  <entry>
+    <title><![CDATA[Hello World]]></title>
+    <url>%2F2019%2F05%2F16%2Fhello-world%2F</url>
+    <content type="text"><![CDATA[Welcome to Hexo! This is your very first post. Check documentation for more info. If you get any problems when using Hexo, you can find the answer in troubleshooting or you can ask me on GitHub. Quick StartCreate a new post1$ hexo new "My New Post" More info: Writing Run server1$ hexo server More info: Server Generate static files1$ hexo generate More info: Generating Deploy to remote sites1$ hexo deploy More info: Deployment]]></content>
+  </entry>
+  <entry>
+    <title><![CDATA[一个简单的微积分证明]]></title>
+    <url>%2F2019%2F02%2F12%2F%E5%BE%AE%E7%A7%AF%E5%88%86%E8%AF%81%E6%98%8E%E6%98%BE%E7%A4%BA%E6%B5%8B%E8%AF%95%2F</url>
+    <content type="text"><![CDATA[$以球体内部一点P与球心O的连线为Z轴建立空间直角坐标系$$对于引力微元dF_G，有：$$$dF_G=\frac {GmdM} {r^2}\propto\frac {dM} {r^2}$$$故用\frac {dM} {r^2}表示，又因为存在$$$\boxed{dS=R^2sinψdθdψ}$$$$dM=\frac M {4πR^2} R^2sinψdθdψ=\frac M {4\pi} sinψdθdψ$$$由余弦定理有：\color{blue}r^2=R^2+Z_o^2-2Z_oRcosψ$$而将F_G分解为沿xoy平面和z轴两部分，沿xoy平面之和为0$$$\sum F_{xoy}=0,\sum dF_G=\sum dF_Z$$$dF_Z=dF_Gcos{\alpha}=dF_G\frac {Rcos{alpha}-Z_o} r\propto\frac {dM} {r^2}\frac {Rcos{\alpha}-Z_o} r$$=\frac {Msinψ(Rcosψ-Z_o)dθdψ} {4π(R^2+Z_o^2-2Z_oRcosψ)^{3/2}}$$\Rightarrow F_z=\iint dF_z=\iint \frac {Msinψ(Rcosψ-Z_o)dθdψ} {4π(R^2+Z_o^2-2Z_oRcosψ)^{3/2}}$$=\int _0 ^{2\pi} d\theta \int_0^\pi \frac {Msinψ(Rcosψ-Z_o)} {4π(R^2+Z_o^2-2Z_oRcosψ)^{3/2}}dψ$$=\int_{-1}^1\frac {M(Rx-Z_o)}{2(R^2+Z_o^2-2Z_oRx)^{3/2}}dx$$=\int_{-1}^1-\frac M{2Z_oR}(Rx-Z_o)d(R^2+Z_o^2-2Z_oRx)^{-1/2}$$=-\frac M{2Z_oR}[(Rx-Z_o)(R^2+Z_o^2-2Z_oRx)^{-1/2}]|_{-1} ^1+\frac M{2Z_oR}\int _{-1}^1(Z_o^2+R^2-2Z_oRx)d(Rx-Z_o)$$=-\frac M{2Z_oR}[(Rx-Z_o)(R^2+Z_o^2-2Z_oRx)^{-1/2}]|_{-1} ^1-\frac M{4Z_o^2R}\int_{-1} ^1(Z_o^2+R^2-2Z_oRx)^{-1/2}d(Z_o^2+R^2-2Z_oRx)$$=-\frac M{2Z_oR}[(Rx-Z_o)(R^2+Z_o^2-2Z_oRx)^{-1/2}]|_{-1} ^1-\frac M{4Z_o^2R}\int_{-1} ^1(Z_o^2+R^2-2Z_oRx)^{1/2}|_{-1} ^1$$=-\frac M{2Z_oR}[(Rx-Z_o-\frac {Z_o^2+R^2-2Z_oRx} {2Z_o})(Z_o^2+R^2-2Z_oRx)^{-1/2}]|_{-1}^1$$=-\frac M{2Z_oR}[(Rx-Rx)(Z_o^2+R^2-2Z_oRx)^{-1/2}]|_{-1}^1$$=\color{red}0$$证明完毕$]]></content>
+      <tags>
+        <tag>Mathjax显示测试</tag>
+      </tags>
+  </entry>
+</search>
