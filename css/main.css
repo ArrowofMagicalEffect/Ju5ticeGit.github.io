@@ -1845,7 +1845,7 @@ pre .javascript .function {
   width: 4px;
   height: 4px;
   border-radius: 50%;
-  background: #ffc2ff;
+  background: #b9ff2b;
 }
 .links-of-blogroll {
   font-size: 13px;
@@ -2940,4 +2940,15 @@ hr {
   background: rgba(255,255,255,0.9) none repeat scroll !important;
   -webkit-box-shadow: 0 0 5px rgba(202,203,203,0.5);
   -moz-box-shadow: 0 0 5px rgba(202,203,204,0.5);
+}
+.sidebar {
+  background: url("https://s2.ax1x.com/2019/05/16/EbTPwF.jpg");
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+}
+.sidebar p,
+.sidebar span,
+.sidebar a {
+  color: #e16b8c;
 }
