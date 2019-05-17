@@ -1666,11 +1666,11 @@ pre .javascript .function {
   font-family: UKIJ Ekran;
 }
 .post-body p a {
-  color: #080808;
+  color: #1a04a5;
   border-bottom: none;
 }
 .post-body p a:hover {
-  color: #2b5f75;
+  color: #db4d6d;
 }
 .sidebar {
   position: fixed;
@@ -1845,7 +1845,7 @@ pre .javascript .function {
   width: 4px;
   height: 4px;
   border-radius: 50%;
-  background: #d9ff81;
+  background: #710f7d;
 }
 .links-of-blogroll {
   font-size: 13px;
