@@ -1,4 +1,30 @@
 <!DOCTYPE html>
+<script src="/js/src/APlayer-Controler.js"></script>
+<div id="AP-controler"></div>
+<script type="text/javascript">
+var myapc=new APlayer_Controler({
+		APC_dom:$('#AP-controler'),
+		aplayer:ap, //此为绑定的aplayer对象
+		attach_right:true,
+		position:{top:'300px',bottom:''},
+		fixed:true,
+		btn_width:100,
+		btn_height:120,
+		img_src:['http://oty1v077k.bkt.clouddn.com/bukagirl.jpg',
+				'http://oty1v077k.bkt.clouddn.com/jumpgirl.jpg',
+				'http://oty1v077k.bkt.clouddn.com/pentigirl.jpg',
+				'http://oty1v077k.bkt.clouddn.com/%E8%90%8C1.gif'],
+		img_style:{repeat:'no-repeat',position:'center',size:'contain'},
+		ctrls_color:'rgba(173,255,47,0.8)',
+		ctrls_hover_color:'rgba(255,140,0,0.7)',
+		tips_on:true,
+		tips_width:140,
+		tips_height:25,
+		tips_color:'rgba(255,255,255,0.6)',
+		tips_content:{},
+		timeout:30
+	});
+</script>
 
 
 
@@ -620,66 +646,64 @@
                 
               </ul>
             </div>
-           
-         <div id="aplayer" class="aplayer"></div>
-<script src="/js/src/custom/APlayer.min.js"></script>
-<script type="text/javascript">
-var ap = new APlayer({
-    element: document.getElementById('aplayer'),                       // Optional, player element
-    narrow: false,                                                     // Optional, narrow style
-    autoplay: false,                                                    // Optional, autoplay song(s), not supported by mobile browsers
-    showlrc: 0,                                                        // Optional, show lrc, can be 0, 1, 2, see: ###With lrc
-    mutex: true,                                                       // Optional, pause other players when this player playing
-    theme: '#e6d0b2',                                                  // Optional, theme color, default: #b7daff
-    mode: 'random',                                                    // Optional, play mode, can be `random` `single` `circulation`(loop) `order`(no loop), default: `circulation`
-    preload: 'metadata',                                               // Optional, the way to load music, can be 'none' 'metadata' 'auto', default: 'auto'
-    listmaxheight: '513px',                                             // Optional, max height of play list
-    music: [{
-      title: '双笙 囧菌 - 世末歌者',
-      author: '双笙 囧菌',
-      url: 'https://qianling-1254036047.cos.ap-chengdu.myqcloud.com/music/%E5%8F%8C%E7%AC%99%20%E5%9B%A7%E8%8F%8C%20-%20%E4%B8%96%E6%9C%AB%E6%AD%8C%E8%80%85.mp3',
-      pic: 'https://qianling-1254036047.cos.ap-chengdu.myqcloud.com/music/%E5%8F%8C%E7%AC%99%20%E5%9B%A7%E8%8F%8C%20-%20%E4%B8%96%E6%9C%AB%E6%AD%8C%E8%80%85.webp',
-    }, {
-      title: '幹物女(WeiWei)',
-      author: '封茗囧菌',
-      url: 'https://qianling-1254036047.cos.ap-chengdu.myqcloud.com/music/%E5%B0%81%E8%8C%97%E5%9B%A7%E8%8F%8C%20-%20%E5%B9%B9%E7%89%A9%E5%A5%B3(WeiWei).mp3',
-      pic: 'https://qianling-1254036047.cos.ap-chengdu.myqcloud.com/music/%E5%B0%81%E8%8C%97%E5%9B%A7%E8%8F%8C%20-%20%E5%B9%B9%E7%89%A9%E5%A5%B3(WeiWei).webp',
-    }]
-  });
-</script>
             <!--<div id="music163player">
              <iframe frameborder="no" border="0" marginwidth="0" marginheight="0" width=330 height=450 src="//music.163.com/outchain/player?type=0&id=2800969560&auto=0&height=430"></iframe>
              </iframe>
           </div>
           -->
 
-          <div id="aplayer" class="aplayer"></div>
-<script src="/js/src/custom/APlayer.min.js"></script>
+          <div id="player1" class="aplayer" data-id="2058781355" data-server="netease" data-type="playlist" data-mode="circulation"></div>
+<script src="/js/src/APlayer.min.js"></script>
 <script type="text/javascript">
 var ap = new APlayer({
-    element: document.getElementById('aplayer'),                       // Optional, player element
+    element: document.getElementById('player1'),                       // Optional, player element
     narrow: false,                                                     // Optional, narrow style
     autoplay: false,                                                    // Optional, autoplay song(s), not supported by mobile browsers
-    showlrc: 0,                                                        // Optional, show lrc, can be 0, 1, 2, see: ###With lrc
+    showlrc: 3,                                                        // Optional, show lrc, can be 0, 1, 2, see: ###With lrc
     mutex: true,                                                       // Optional, pause other players when this player playing
     theme: '#e6d0b2',                                                  // Optional, theme color, default: #b7daff
-    mode: 'random',                                                    // Optional, play mode, can be `random` `single` `circulation`(loop) `order`(no loop), default: `circulation`
+    mode: 'circulation',                                               // Optional, play mode, can be `random` `single` `circulation`(loop) `order`(no loop), default: `circulation`
     preload: 'metadata',                                               // Optional, the way to load music, can be 'none' 'metadata' 'auto', default: 'auto'
-    listmaxheight: '513px',                                             // Optional, max height of play list
-    music: [{
-      title: '双笙 囧菌 - 世末歌者',
-      author: '双笙 囧菌',
-      url: 'https://qianling-1254036047.cos.ap-chengdu.myqcloud.com/music/%E5%8F%8C%E7%AC%99%20%E5%9B%A7%E8%8F%8C%20-%20%E4%B8%96%E6%9C%AB%E6%AD%8C%E8%80%85.mp3',
-      pic: 'https://qianling-1254036047.cos.ap-chengdu.myqcloud.com/music/%E5%8F%8C%E7%AC%99%20%E5%9B%A7%E8%8F%8C%20-%20%E4%B8%96%E6%9C%AB%E6%AD%8C%E8%80%85.webp',
-    }, {
-      title: '幹物女(WeiWei)',
-      author: '封茗囧菌',
-      url: 'https://qianling-1254036047.cos.ap-chengdu.myqcloud.com/music/%E5%B0%81%E8%8C%97%E5%9B%A7%E8%8F%8C%20-%20%E5%B9%B9%E7%89%A9%E5%A5%B3(WeiWei).mp3',
-      pic: 'https://qianling-1254036047.cos.ap-chengdu.myqcloud.com/music/%E5%B0%81%E8%8C%97%E5%9B%A7%E8%8F%8C%20-%20%E5%B9%B9%E7%89%A9%E5%A5%B3(WeiWei).webp',
-    }]
-  });
+    listmaxheight: '513px',                                            // Optional, max height of play list
+    music: [
+        {
+            title: 'Internationale',                                      // Required, music title
+            author: '唐朝乐队',                                               // Required, music author
+            url: 'http://dl.stream.qqmusic.qq.com/M500004BvDZa1edK2B.mp3?vkey=4E877CC19596607D7511D050F9892F62D73A88168F9DACF1A85B775D08F2075D5D645D3FA330A4948D15ADE74D4234FEF5B75EA770277CC8&guid=5150825362&fromtag=1',                     // Required, music url
+            pic: 'https://s2.ax1x.com/2019/05/18/ELObu9.gif',                    // Optional, music picture
+            lrc: '/music/国际歌.lrc'                    // Optional, lrc, see: ###With lrc
+        },
+        {
+            title: 'Roundabout',                                          // Required, music title
+            author: 'Yes',                                                // Required, music author
+            url: 'http://dl.stream.qqmusic.qq.com/M5000018OsZx1CHNT1.mp3?vkey=E83146FC6B042DAFD6219E0B7BF25FC418909DDAF50E4FE2FF211977761116D15CA5D53386419D57334843EFC7E8751DE6CEF1961A9618FE&guid=5150825362&fromtag=1',                          // Required, music url
+            pic: 'https://s2.ax1x.com/2019/05/18/ELObu9.gif',                          // Optional, music picture
+            lrc: '/music/Roundabout-Yes.lrc'                           // Optional, lrc, see: ###With lrc
+        },
+        {
+            title: 'Walk Like An Egyptian',                                          // Required, music title
+            author: 'The Bangles',                                           // Required, music author
+            url: 'http://dl.stream.qqmusic.qq.com/M500002cEGWR4UVzPo.mp3?vkey=D4B8A7DDDB6F329A2D767710BACF330935DBD82C4B5812EA2DC98E1496F1D1EE58107B4D2C151E58B71265490354A6313D2DB371394D1D06&guid=5150825362&fromtag=1',                          // Required, music url
+            pic: 'https://s2.ax1x.com/2019/05/18/ELObu9.gif',                         // Optional, music picture
+            lrc: '/music/埃及.lrc'                         // Optional, lrc, see: ###With lrc
+        },
+        {
+            title: '回レ! 雪月花',                                          // Required, music title
+            author: '歌組雪月花',                                           // Required, music author
+            url: 'http://dl.stream.qqmusic.qq.com/M500002iedbM3sFYu1.mp3?vkey=91007C9E6E55E45F9DFE5E4011531F021100ABAA9C72E134B85BAA48B793078D2546C0C3B98F2AFB259BE4BCAE8BDD444FA71C1BE679869F&guid=5150825362&fromtag=1',                          // Required, music url
+            pic: '/music/特朗普.jpg',                         // Optional, music picture
+            lrc: '/music/雪.lrc'                         // Optional, lrc, see: ###With lrc
+        },
+        {
+            title: '见えない黒に堕ちてゆけ',                                          // Required, music title
+            author: 'ALSTRO&MERIA',                                           // Required, music author
+            url: 'http://m10.music.126.net/20190517235716/733bce2a0d02e2b1be6602e333c5693f/ymusic/33fe/810f/f8ba/7fd1f2ff12a143e57b3182e8c2e0bcc0.mp3',                          // Required, music url
+            pic: 'https://s2.ax1x.com/2019/05/18/ELObu9.gif',                         // Optional, music picture
+            lrc: '/music/黑.lrc'                         // Optional, lrc, see: ###With lrc
+        }
+    ]
+});
 </script>
-
         </div>
       </section>
 

@@ -1845,7 +1845,7 @@ pre .javascript .function {
   width: 4px;
   height: 4px;
   border-radius: 50%;
-  background: #ff2591;
+  background: #ff67f5;
 }
 .links-of-blogroll {
   font-size: 13px;
@@ -2951,4 +2951,39 @@ hr {
 .sidebar span,
 .sidebar a {
   color: #ffc408;
+}
+.aplayer-list {
+  height: 100px !important;
+}
+.aplayer-list ol li:hover {
+/*列表悬停颜色*/
+  background: rgba(255,255,255,0.3) none repeat scroll !important;
+}
+.aplayer-list ol li {
+/*列表底色*/
+  background: rgba(250,252,123,0.3);
+}
+.aplayer-list-light {
+/*列表播放歌曲颜色*/
+  background: rgba(97,217,101,0.3) none repeat scroll !important;
+}
+#player1 {
+/*边框样式*/
+  border-radius: 6px;
+}
+#player1 div,
+#player1 ol {
+  border-radius: 6px;
+}
+#player1 * {
+  color: #696969;
+}
+.aplayer-list-index {
+  float: left;
+}
+.aplayer-list-title {
+  float: left;
+}
+.aplayer-list-author {
+  float: right;
 }
