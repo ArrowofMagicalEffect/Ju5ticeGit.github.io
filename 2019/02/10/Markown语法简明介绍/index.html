@@ -493,7 +493,7 @@ var myapc=new APlayer_Controler({
 <h2 id="索引超链接"><a href="#索引超链接" class="headerlink" title="索引超链接"></a>索引超链接</h2><p>感觉没怎么用过啊，“1”可以指代任意字符。<br><figure class="highlight markdown"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">[<span class="string">Ju5tice</span>][<span class="symbol">1</span>]</span><br><span class="line">[<span class="symbol">1</span>]:<span class="link">www.jinhuaixin.cn</span></span><br><span class="line"></span><br><span class="line">[<span class="string">[1</span>]Ju5tice][[1]]</span><br><span class="line">[<span class="symbol">[1</span>]]: http://www.jinhuaixin.cn "Ju5tice"</span><br></pre></td></tr></table></figure></p>
 <p>[Ju5tice][1]<br>[1]:<a href="http://www.jinhuaixin.cn" target="_blank" rel="noopener">www.jinhuaixin.cn</a></p>
 <h2 id="自动超链接"><a href="#自动超链接" class="headerlink" title="自动超链接"></a>自动超链接</h2><p>这个感觉还是HTML标签的作用，不太清楚。<br><figure class="highlight html"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"><span class="tag">&lt;<span class="name">https:</span>//<span class="attr">www.jinhuaixin.cn</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;<span class="name">208766617@qq.com</span>&gt;</span></span><br></pre></td></tr></table></figure></p>
-<p>&lt;<a href="http://www.jinhuaixin.cn&gt;" target="_blank" rel="noopener">www.jinhuaixin.cn&gt;</a><br><a href="mailto:&#x32;&#48;&#x38;&#x37;&#x36;&#x36;&#54;&#49;&#55;&#x40;&#113;&#x71;&#x2e;&#99;&#x6f;&#109;" target="_blank" rel="noopener">&#x32;&#48;&#x38;&#x37;&#x36;&#x36;&#54;&#49;&#55;&#x40;&#113;&#x71;&#x2e;&#99;&#x6f;&#109;</a></p>
+<p>&lt;<a href="http://www.jinhuaixin.cn&gt;" target="_blank" rel="noopener">www.jinhuaixin.cn&gt;</a><br><a href="mailto:&#50;&#48;&#x38;&#x37;&#54;&#x36;&#x36;&#49;&#x37;&#64;&#x71;&#x71;&#x2e;&#99;&#x6f;&#109;" target="_blank" rel="noopener">&#50;&#48;&#x38;&#x37;&#54;&#x36;&#x36;&#49;&#x37;&#64;&#x71;&#x71;&#x2e;&#99;&#x6f;&#109;</a></p>
 <h1 id="代码"><a href="#代码" class="headerlink" title="代码"></a>代码</h1><p>这有啥好说的。。。<br><figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br></pre></td><td class="code"><pre><span class="line"><span class="function"><span class="keyword">def</span> <span class="title">stable_match</span><span class="params">(men, women)</span>:</span></span><br><span class="line">free_men = deque(men)</span><br><span class="line">engaged = defaultdict(<span class="keyword">lambda</span>: <span class="literal">None</span>)</span><br><span class="line"><span class="keyword">while</span> free_men:</span><br><span class="line">i = free_men.popleft()</span><br><span class="line"><span class="comment"># man proposes women according his preferences</span></span><br><span class="line"><span class="keyword">for</span> j <span class="keyword">in</span> men[i]:</span><br><span class="line">preference = women[j].index</span><br><span class="line">fiance = engaged[j]</span><br><span class="line"><span class="comment"># woman accepts the better offer</span></span><br><span class="line"><span class="keyword">if</span> <span class="keyword">not</span> fiance <span class="keyword">or</span> preference(i) &lt; preference(fiance):</span><br><span class="line">engaged[j] = i</span><br><span class="line">fiance <span class="keyword">and</span> free_men.append(fiance)</span><br><span class="line"><span class="keyword">break</span></span><br><span class="line"><span class="keyword">return</span> [(m, w) <span class="keyword">for</span> w, m <span class="keyword">in</span> engaged.items()]</span><br></pre></td></tr></table></figure></p>
 <h1 id="注释"><a href="#注释" class="headerlink" title="注释"></a>注释</h1><p>Markdown里面的注释基本是基于HTML标签的，反正也不会在页面显示。<br><figure class="highlight xml"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">&lt;!-- 注释 --&gt;</span></span><br><span class="line"></span><br><span class="line"><span class="tag">&lt;<span class="name">div</span> <span class="attr">style</span>=<span class="string">'display: none'</span>&gt;</span></span><br><span class="line">哈哈我是注释，不会在浏览器中显示。</span><br><span class="line">我也是注释。</span><br><span class="line"><span class="tag">&lt;/<span class="name">div</span>&gt;</span></span><br></pre></td></tr></table></figure></p>
 <!-- 注释 -->
@@ -808,35 +808,35 @@ var ap = new APlayer({
         {
             title: 'Internationale',                                      // Required, music title
             author: '唐朝乐队',                                               // Required, music author
-            url: 'http://dl.stream.qqmusic.qq.com/M500004BvDZa1edK2B.mp3?vkey=4E877CC19596607D7511D050F9892F62D73A88168F9DACF1A85B775D08F2075D5D645D3FA330A4948D15ADE74D4234FEF5B75EA770277CC8&guid=5150825362&fromtag=1',                     // Required, music url
+            url: '/music/国际歌.mp3',                     // Required, music url
             pic: 'https://s2.ax1x.com/2019/05/18/ELObu9.gif',                    // Optional, music picture
             lrc: '/music/国际歌.lrc'                    // Optional, lrc, see: ###With lrc
         },
         {
             title: 'Roundabout',                                          // Required, music title
             author: 'Yes',                                                // Required, music author
-            url: 'http://dl.stream.qqmusic.qq.com/M5000018OsZx1CHNT1.mp3?vkey=E83146FC6B042DAFD6219E0B7BF25FC418909DDAF50E4FE2FF211977761116D15CA5D53386419D57334843EFC7E8751DE6CEF1961A9618FE&guid=5150825362&fromtag=1',                          // Required, music url
+            url: '/music/round.mp3',                          // Required, music url
             pic: 'https://s2.ax1x.com/2019/05/18/ELObu9.gif',                          // Optional, music picture
             lrc: '/music/Roundabout-Yes.lrc'                           // Optional, lrc, see: ###With lrc
         },
         {
             title: 'Walk Like An Egyptian',                                          // Required, music title
             author: 'The Bangles',                                           // Required, music author
-            url: 'http://dl.stream.qqmusic.qq.com/M500002cEGWR4UVzPo.mp3?vkey=D4B8A7DDDB6F329A2D767710BACF330935DBD82C4B5812EA2DC98E1496F1D1EE58107B4D2C151E58B71265490354A6313D2DB371394D1D06&guid=5150825362&fromtag=1',                          // Required, music url
+            url: '/music/walk.mp3',                          // Required, music url
             pic: 'https://s2.ax1x.com/2019/05/18/ELObu9.gif',                         // Optional, music picture
             lrc: '/music/埃及.lrc'                         // Optional, lrc, see: ###With lrc
         },
         {
             title: '回レ! 雪月花',                                          // Required, music title
             author: '歌組雪月花',                                           // Required, music author
-            url: 'http://dl.stream.qqmusic.qq.com/M500002iedbM3sFYu1.mp3?vkey=91007C9E6E55E45F9DFE5E4011531F021100ABAA9C72E134B85BAA48B793078D2546C0C3B98F2AFB259BE4BCAE8BDD444FA71C1BE679869F&guid=5150825362&fromtag=1',                          // Required, music url
+            url: '/music/雪.mp3',                          // Required, music url
             pic: '/music/特朗普.jpg',                         // Optional, music picture
             lrc: '/music/雪.lrc'                         // Optional, lrc, see: ###With lrc
         },
         {
             title: '见えない黒に堕ちてゆけ',                                          // Required, music title
             author: 'ALSTRO&MERIA',                                           // Required, music author
-            url: 'http://dl.stream.qqmusic.qq.com/M5000041Ai2D1rPUeO.mp3?vkey=41CEEA7D19C7CA2B00FD1D98D1FB42F09F7B969D29E97B66DC4E6B7EC81024BDA44F7490E03FD3DBBF8176DEEC679414423676D67BC29D9A&guid=5150825362&fromtag=1',                          // Required, music url
+            url: '/music/见.mp3',                          // Required, music url
             pic: 'https://s2.ax1x.com/2019/05/18/ELObu9.gif',                         // Optional, music picture
             lrc: '/music/黑.lrc'                         // Optional, lrc, see: ###With lrc
         }
