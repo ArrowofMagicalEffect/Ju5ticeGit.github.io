@@ -34,6 +34,16 @@ var myapc=new APlayer_Controler({
 <html class="theme-next mist use-motion" lang="zh-Hans">
 <head><meta name="generator" content="Hexo 3.8.0">
   <meta charset="UTF-8">
+<script>
+    (function(){
+        if(''){
+            if (prompt('请输入文章密码') !== ''){
+                alert('密码错误！');
+                history.back();
+            }
+        }
+    })();
+</script>
 <meta http-equiv="X-UA-Compatible" content="IE=edge">
 <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
 <meta name="theme-color" content="#222">
@@ -398,7 +408,7 @@ var myapc=new APlayer_Controler({
                   <span class="post-meta-item-text">字数统计&#58;</span>
                 
                 <span title="字数统计">
-                  33
+                  325
                 </span>
               
 
@@ -436,9 +446,7 @@ var myapc=new APlayer_Controler({
 
       
         
-          
-          欧尼酱！欧尼酱！欧尼酱！快来写我吧！这样的话……我会永远永远和欧尼酱在一起的哦……~
-          
+          <p><img src="https://s2.ax1x.com/2019/06/07/VwpRkq.jpg"><br>
           <!--noindex-->
           <div class="post-button text-center">
             <a class="btn" href="/2019/06/06/又是一年端午时/#more" rel="contents">
@@ -448,7 +456,7 @@ var myapc=new APlayer_Controler({
           <!--/noindex-->
         
       
-    </div>
+    </p></div>
     
     
     
@@ -1200,7 +1208,7 @@ var ap = new APlayer({
     
       <span class="post-meta-item-text">Site words total count&#58;</span>
     
-    <span title="Site words total count">6.3k</span>
+    <span title="Site words total count">6.6k</span>
   
 </div>
 
@@ -1215,6 +1223,32 @@ var ap = new APlayer({
 
   <div class="theme-info">主题 &mdash; <a class="theme-link" target="_blank" href="https://github.com/iissnan/hexo-theme-next">NexT.Mist</a> v5.1.4</div>
 -->
+<div id="days"></div>
+<script>
+function show_date_time(){
+    window.setTimeout("show_date_time()", 1000);
+    BirthDay=new Date("02/10/2019 15:13:14");//修改为自己的blog建站时间
+    today=new Date();
+    timeold=(today.getTime()-BirthDay.getTime());
+    sectimeold=timeold/1000
+    secondsold=Math.floor(sectimeold);
+    msPerDay=24*60*60*1000
+    e_daysold=timeold/msPerDay
+    daysold=Math.floor(e_daysold);
+    e_hrsold=(e_daysold-daysold)*24;
+    hrsold=setzero(Math.floor(e_hrsold));
+    e_minsold=(e_hrsold-hrsold)*60;
+    minsold=setzero(Math.floor((e_hrsold-hrsold)*60));
+    seconds=setzero(Math.floor((e_minsold-minsold)*60));
+    document.getElementById('days').innerHTML="此blog已安全运行"+daysold+"天"+hrsold+"小时"+minsold+"分"+seconds+"秒";
+}
+function setzero(i){
+    if (i<10)
+    {i="0" + i};
+    return i;
+}
+show_date_time();
+</script>
 <div class="font_div">
 <a href="http://www.miitbeian.gov.cn/">皖ICP备19002890号</a>
 </div>

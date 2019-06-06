@@ -445,11 +445,11 @@ body {
 .header-inner {
   margin: 0 auto;
   padding: 100px 0 70px;
-  width: 700px;
+  width: 790px;
 }
 @media (min-width: 1600px) {
   .container .header-inner {
-    width: 900px;
+    width: 1000px;
   }
 }
 .main {
@@ -457,11 +457,11 @@ body {
 }
 .main-inner {
   margin: 0 auto;
-  width: 700px;
+  width: 790px;
 }
 @media (min-width: 1600px) {
   .container .main-inner {
-    width: 900px;
+    width: 1000px;
   }
 }
 .footer {
@@ -474,11 +474,11 @@ body {
 .footer-inner {
   box-sizing: border-box;
   margin: 20px auto;
-  width: 700px;
+  width: 790px;
 }
 @media (min-width: 1600px) {
   .container .footer-inner {
-    width: 900px;
+    width: 1000px;
   }
 }
 pre,
@@ -1329,7 +1329,7 @@ pre .javascript .function {
   box-sizing: border-box;
   margin: auto;
   padding: 3px;
-  border: 1px solid #ddd;
+  border: none;
 }
 .posts-expand .post-body .fancybox img {
   margin: 0 auto 25px;
@@ -1665,13 +1665,6 @@ pre .javascript .function {
 .rtl.post-title {
   font-family: UKIJ Ekran;
 }
-.post-body p a {
-  color: #1a04a5;
-  border-bottom: none;
-}
-.post-body p a:hover {
-  color: #db4d6d;
-}
 .sidebar {
   position: fixed;
   right: 0;
@@ -1845,7 +1838,7 @@ pre .javascript .function {
   width: 4px;
   height: 4px;
   border-radius: 50%;
-  background: #63871b;
+  background: #4acd20;
 }
 .links-of-blogroll {
   font-size: 13px;
@@ -2933,6 +2926,9 @@ hr {
 .sidebar-toggle {
   left: 30px;
 }
+.feed-link a {
+  display: inline-block;
+}
 .post {
   margin-top: 60px;
   margin-bottom: 60px;
@@ -2986,4 +2982,122 @@ hr {
 }
 .aplayer-list-author {
   float: right;
+}
+.heimu,
+.heimu a {
+  background-color: #252525;
+  color: #252525;
+  text-shadow: none;
+}
+::selection {
+  background: #9ab0c0;
+  color: #fff;
+}
+.heimu:hover,
+.heimu:hover a {
+  transition: color 0.13s linear;
+  color: #fff;
+}
+.print {
+  width: 250px;
+  white-space: nowrap;
+  overflow: hidden;
+  -webkit-animation: dy 3s steps(60, end) infinite;
+  animation: dy 3s steps(50, end) infinite;
+}
+@-webkit-keyframes dy {
+  from {
+    width: 0;
+  }
+}
+.typing {
+  width: 15em;
+  white-space: nowrap;
+  border-right: 2px solid transparent;
+  animation: typing 3.5s steps(15, end), blink-caret 0.75s step-end infinite;
+  overflow: hidden;
+}
+@-moz-keyframes dy {
+  from {
+    width: 0;
+  }
+}
+@-webkit-keyframes dy {
+  from {
+    width: 0;
+  }
+}
+@-o-keyframes dy {
+  from {
+    width: 0;
+  }
+}
+@keyframes dy {
+  from {
+    width: 0;
+  }
+}
+@-moz-keyframes typing {
+  from {
+    width: 0;
+  }
+  to {
+    width: 15em;
+  }
+}
+@-webkit-keyframes typing {
+  from {
+    width: 0;
+  }
+  to {
+    width: 15em;
+  }
+}
+@-o-keyframes typing {
+  from {
+    width: 0;
+  }
+  to {
+    width: 15em;
+  }
+}
+@keyframes typing {
+  from {
+    width: 0;
+  }
+  to {
+    width: 15em;
+  }
+}
+@-moz-keyframes blink-caret {
+  from, to {
+    box-shadow: 1px 0 0 0 transparent;
+  }
+  50% {
+    box-shadow: 1px 0 0 0;
+  }
+}
+@-webkit-keyframes blink-caret {
+  from, to {
+    box-shadow: 1px 0 0 0 transparent;
+  }
+  50% {
+    box-shadow: 1px 0 0 0;
+  }
+}
+@-o-keyframes blink-caret {
+  from, to {
+    box-shadow: 1px 0 0 0 transparent;
+  }
+  50% {
+    box-shadow: 1px 0 0 0;
+  }
+}
+@keyframes blink-caret {
+  from, to {
+    box-shadow: 1px 0 0 0 transparent;
+  }
+  50% {
+    box-shadow: 1px 0 0 0;
+  }
 }
