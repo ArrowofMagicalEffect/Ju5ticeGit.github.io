@@ -130,7 +130,7 @@ var myapc=new APlayer_Controler({
 <meta property="og:site_name" content="Ju5tice&#39;s blog">
 <meta property="og:description" content="雷永辉—&amp;gt;算法？IPv4属性闪退，在安全模式下重注册dll 输入cmd 输入for %1 in (%windir%\system32*.dll) do regsvr32.exe /s %1  利用实验平台模拟智能家居使用C语言实现，Andriod，服务器物联网与无线通信技术。  NB-IoT，窄带物联网，利用手机通信频段分出来进行物联。 覆盖广 功耗低 成本低(&amp;lt;=20RMB) 连接多">
 <meta property="og:locale" content="zh-Hans">
-<meta property="og:updated_time" content="2019-07-13T09:05:52.794Z">
+<meta property="og:updated_time" content="2019-07-13T11:51:39.959Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="易腾创想day1">
 <meta name="twitter:description" content="雷永辉—&amp;gt;算法？IPv4属性闪退，在安全模式下重注册dll 输入cmd 输入for %1 in (%windir%\system32*.dll) do regsvr32.exe /s %1  利用实验平台模拟智能家居使用C语言实现，Andriod，服务器物联网与无线通信技术。  NB-IoT，窄带物联网，利用手机通信频段分出来进行物联。 覆盖广 功耗低 成本低(&amp;lt;=20RMB) 连接多">
@@ -410,7 +410,7 @@ var myapc=new APlayer_Controler({
                   <span class="post-meta-item-text">字数统计&#58;</span>
                 
                 <span title="字数统计">
-                  241
+                  350
                 </span>
               
 
@@ -507,10 +507,20 @@ var myapc=new APlayer_Controler({
 <td style="text-align:center">应用最广</td>
 <td style="text-align:right">可自组网，最大节点数可达65000个</td>
 <td style="text-align:right">可基于电力线传输，无需布线</td>
-<td style="text-align:right"></td>
 </tr>
 </tbody>
 </table>
+<h4 id="CC2530基础开发"><a href="#CC2530基础开发" class="headerlink" title="CC2530基础开发"></a>CC2530基础开发</h4><ul>
+<li>掌握I/O的使用</li>
+<li>理解存储器以及映射的关系</li>
+<li>掌握ADC的使用方法</li>
+<li>掌握串口和DMA的使用方法</li>
+<li>掌握定时器的使用<font color="red"><strong>iot.h</strong></font>
+
+</li>
+</ul>
+<figure class="highlight c"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">#<span class="meta-keyword">include</span> <span class="meta-string">&lt;iocc2530.h&gt;</span></span></span><br><span class="line"><span class="meta">#<span class="meta-keyword">define</span> uchar unsigned char</span></span><br><span class="line"><span class="meta">#<span class="meta-keyword">define</span> uint unsigned int</span></span><br><span class="line"><span class="meta">#<span class="meta-keyword">define</span> LED1 P0_1 <span class="comment">//IO口定义</span></span></span><br><span class="line"><span class="meta">#<span class="meta-keyword">define</span> SW P0_4</span></span><br></pre></td></tr></table></figure>
+<p><font color="red"><strong>main.c</strong></font><br><figure class="highlight c"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">#<span class="meta-keyword">include</span> <span class="meta-string">"iot.h"</span></span></span><br><span class="line"><span class="function"><span class="keyword">void</span> <span class="title">main</span><span class="params">()</span></span></span><br><span class="line"><span class="function"></span>&#123;</span><br><span class="line">	<span class="keyword">while</span>(<span class="number">1</span>)</span><br><span class="line">	&#123;</span><br><span class="line">		<span class="comment">//blabla...</span></span><br><span class="line">	&#125;</span><br><span class="line">&#125;</span><br><span class="line">``` </span><br><span class="line">&lt;font color=red&gt;**key.c**&lt;/font&gt;</span><br><span class="line">```C</span><br><span class="line">#include <span class="string">"iot.h"</span></span><br><span class="line"><span class="keyword">void</span> key_scan()</span><br><span class="line">&#123;</span><br><span class="line">	;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure></p>
 
       
     </div>
@@ -570,6 +580,10 @@ var myapc=new APlayer_Controler({
           <span class="post-nav-divider"></span>
 
           <div class="post-nav-prev post-nav-item">
+            
+              <a href="/2019/07/15/基于CC2530驱动步进电机/" rel="prev" title="基于CC2530驱动步进电机">
+                基于CC2530驱动步进电机 <i class="fa fa-chevron-right"></i>
+              </a>
             
           </div>
         </div>
@@ -663,7 +677,7 @@ var myapc=new APlayer_Controler({
               
                 <a href="/archives/">
               
-                  <span class="site-state-item-count">5</span>
+                  <span class="site-state-item-count">6</span>
                   <span class="site-state-item-name">日志</span>
                 </a>
               </div>
@@ -677,7 +691,7 @@ var myapc=new APlayer_Controler({
               
               <div class="site-state-item site-state-tags">
                 
-                  <span class="site-state-item-count">6</span>
+                  <span class="site-state-item-count">9</span>
                   <span class="site-state-item-name">标签</span>
                 
               </div>
@@ -810,7 +824,7 @@ var ap = new APlayer({
             
 
             
-              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-2"><a class="nav-link" href="#雷永辉—-gt-算法？"><span class="nav-number">1.</span> <span class="nav-text">雷永辉—&gt;算法？</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#IPv4属性闪退，在安全模式下重注册dll"><span class="nav-number">1.0.1.</span> <span class="nav-text">IPv4属性闪退，在安全模式下重注册dll</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#NB-IoT，窄带物联网，利用手机通信频段分出来进行物联。"><span class="nav-number">1.0.2.</span> <span class="nav-text">NB-IoT，窄带物联网，利用手机通信频段分出来进行物联。</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#5G技术特点"><span class="nav-number">1.0.3.</span> <span class="nav-text">5G技术特点</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#LoRa-——-超远距离无线传输方案"><span class="nav-number">1.0.4.</span> <span class="nav-text">LoRa —— 超远距离无线传输方案</span></a></li></ol></li></ol></div>
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-2"><a class="nav-link" href="#雷永辉—-gt-算法？"><span class="nav-number">1.</span> <span class="nav-text">雷永辉—&gt;算法？</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#IPv4属性闪退，在安全模式下重注册dll"><span class="nav-number">1.0.1.</span> <span class="nav-text">IPv4属性闪退，在安全模式下重注册dll</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#NB-IoT，窄带物联网，利用手机通信频段分出来进行物联。"><span class="nav-number">1.0.2.</span> <span class="nav-text">NB-IoT，窄带物联网，利用手机通信频段分出来进行物联。</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#5G技术特点"><span class="nav-number">1.0.3.</span> <span class="nav-text">5G技术特点</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#LoRa-——-超远距离无线传输方案"><span class="nav-number">1.0.4.</span> <span class="nav-text">LoRa —— 超远距离无线传输方案</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#CC2530基础开发"><span class="nav-number">1.0.5.</span> <span class="nav-text">CC2530基础开发</span></a></li></ol></li></ol></div>
             
 
           </div>
@@ -844,7 +858,7 @@ var ap = new APlayer({
     
       <span class="post-meta-item-text">Site words total count&#58;</span>
     
-    <span title="Site words total count">6.9k</span>
+    <span title="Site words total count">7.4k</span>
   
 </div>
 
