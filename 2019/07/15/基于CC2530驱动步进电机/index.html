@@ -130,7 +130,7 @@ var myapc=new APlayer_Controler({
 <meta property="og:locale" content="zh-Hans">
 <meta property="og:image" content="https://s2.ax1x.com/2019/07/15/Z7VRuq.jpg">
 <meta property="og:image" content="https://s2.ax1x.com/2019/07/15/Z7VXb6.th.jpg">
-<meta property="og:updated_time" content="2019-07-15T15:43:39.135Z">
+<meta property="og:updated_time" content="2019-07-15T16:07:42.491Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="基于CC2530驱动步进电机">
 <meta name="twitter:image" content="https://s2.ax1x.com/2019/07/15/Z7VRuq.jpg">
@@ -410,7 +410,7 @@ var myapc=new APlayer_Controler({
                   <span class="post-meta-item-text">字数统计&#58;</span>
                 
                 <span title="字数统计">
-                  367
+                  543
                 </span>
               
 
@@ -426,7 +426,7 @@ var myapc=new APlayer_Controler({
                   <span class="post-meta-item-text">阅读时长 &asymp;</span>
                 
                 <span title="阅读时长">
-                  2
+                  3
                 </span>
               
             </div>
@@ -488,10 +488,10 @@ var myapc=new APlayer_Controler({
 <tr>
 <td>B</td>
 <td style="text-align:center"></td>
+<td style="text-align:right">L</td>
+<td style="text-align:right">L</td>
+<td style="text-align:right">L</td>
 <td style="text-align:right"></td>
-<td style="text-align:right">L</td>
-<td style="text-align:right">L</td>
-<td style="text-align:right">L</td>
 <td style="text-align:right"></td>
 <td style="text-align:right"></td>
 <td style="text-align:right"></td>
@@ -501,10 +501,10 @@ var myapc=new APlayer_Controler({
 <td style="text-align:center"></td>
 <td style="text-align:right"></td>
 <td style="text-align:right"></td>
+<td style="text-align:right">L</td>
+<td style="text-align:right">L</td>
+<td style="text-align:right">L</td>
 <td style="text-align:right"></td>
-<td style="text-align:right">L</td>
-<td style="text-align:right">L</td>
-<td style="text-align:right">L</td>
 <td style="text-align:right"></td>
 </tr>
 <tr>
@@ -521,26 +521,27 @@ var myapc=new APlayer_Controler({
 </tbody>
 </table>
 <hr>
-<h3 id="各部分程序"><a href="#各部分程序" class="headerlink" title="各部分程序"></a>各部分程序</h3><div class="note info"><p><strong>main1.c</strong> </p></div>
-
-undefined
-
-<div class="note info"><p><strong>KeyScan.c</strong> </p></div>
-<figure class="highlight c"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">#<span class="meta-keyword">include</span> <span class="meta-string">"ioint.h"</span></span></span><br><span class="line"><span class="meta">#<span class="meta-keyword">include</span> <span class="meta-string">&lt;ioCC2530.h&gt;</span></span></span><br><span class="line"></span><br><span class="line">uint mode=<span class="number">1</span>;</span><br><span class="line">uint state=<span class="number">3</span>;</span><br><span class="line"></span><br><span class="line"><span class="function"><span class="keyword">void</span> <span class="title">main</span><span class="params">()</span></span></span><br><span class="line"><span class="function"></span>&#123;</span><br><span class="line">  io_init();</span><br><span class="line">  Initial();</span><br><span class="line">  </span><br><span class="line">	<span class="keyword">while</span> (<span class="number">1</span>)</span><br><span class="line">	&#123;</span><br><span class="line">		mode=keyscan(mode);</span><br><span class="line">                mode=m_state(mode,state);</span><br><span class="line">		state=motor(mode,state);</span><br><span class="line">                delayms(<span class="number">2</span>);</span><br><span class="line">	&#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
-<div class="note info"><p><strong>delayms.c</strong> </p></div>
-
-undefined
-
-<div class="note info"><p>ioint.h </p></div>
+<h3 id="各部分程序"><a href="#各部分程序" class="headerlink" title="各部分程序"></a>各部分程序</h3><blockquote class="blockquote-center"><p>ioint.h </p>
+</blockquote>
 <figure class="highlight c"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">#<span class="meta-keyword">include</span> <span class="meta-string">&lt;ioCC2530.h&gt;</span></span></span><br><span class="line"><span class="meta">#<span class="meta-keyword">define</span> uint unsigned int</span></span><br><span class="line"><span class="meta">#<span class="meta-keyword">define</span> uchar unsigned char</span></span><br><span class="line"><span class="meta">#<span class="meta-keyword">define</span> A P1_5</span></span><br><span class="line"><span class="meta">#<span class="meta-keyword">define</span> B P1_6</span></span><br><span class="line"><span class="meta">#<span class="meta-keyword">define</span> C P1_7</span></span><br><span class="line"><span class="meta">#<span class="meta-keyword">define</span> D P0_5</span></span><br><span class="line"><span class="meta">#<span class="meta-keyword">define</span> SW6 P0_4        </span></span><br><span class="line">   </span><br><span class="line"></span><br><span class="line"><span class="function"><span class="keyword">void</span> <span class="title">delayms</span><span class="params">(uint n)</span></span>;</span><br><span class="line"><span class="function"><span class="keyword">void</span> <span class="title">io_init</span><span class="params">()</span></span>;</span><br><span class="line"><span class="function"><span class="keyword">void</span> <span class="title">Initial</span><span class="params">()</span></span>;</span><br><span class="line"><span class="function">uint <span class="title">keyscan</span><span class="params">(uint mode)</span></span>;</span><br><span class="line"><span class="function">uint <span class="title">motor</span><span class="params">(uint state,uint motor_state)</span></span>;</span><br><span class="line"><span class="function">uint <span class="title">m_state</span><span class="params">(uint mode,uint state)</span></span>;</span><br></pre></td></tr></table></figure>
-<div class="note info"><p><strong>io_init.c</strong> </p></div>
-
-undefined
-
-<div class="note info"><p><strong>m_state.c</strong> </p></div>
+<blockquote class="blockquote-center"><p><strong>KeyScan.c</strong> </p>
+</blockquote>
+<figure class="highlight c"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">#<span class="meta-keyword">include</span> <span class="meta-string">"ioint.h"</span></span></span><br><span class="line"></span><br><span class="line"><span class="function">uint <span class="title">keyscan</span><span class="params">(uint mode)</span></span></span><br><span class="line"><span class="function"></span>&#123;</span><br><span class="line">	<span class="comment">//检测SW6是否为低电平，低电平有效</span></span><br><span class="line">	<span class="keyword">if</span> (SW6 == <span class="number">0</span>)</span><br><span class="line">	&#123;</span><br><span class="line">		delayms(<span class="number">15</span>);</span><br><span class="line">		<span class="comment">//检测到按键</span></span><br><span class="line">		<span class="keyword">if</span> (SW6 == <span class="number">0</span>)</span><br><span class="line">		&#123;</span><br><span class="line">			mode++;</span><br><span class="line">			<span class="keyword">if</span> (mode &gt;= <span class="number">3</span>)</span><br><span class="line">				mode = <span class="number">0</span>;</span><br><span class="line">			<span class="comment">//直到松开按键</span></span><br><span class="line">			<span class="keyword">while</span> (!SW6);			</span><br><span class="line">		&#125;</span><br><span class="line">	&#125;</span><br><span class="line">     <span class="keyword">return</span> mode;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<blockquote class="blockquote-center"><p><strong>delayms.c</strong> </p>
+</blockquote>
+<figure class="highlight c"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">#<span class="meta-keyword">include</span> <span class="meta-string">&lt;ioCC2530.h&gt;</span></span></span><br><span class="line"><span class="meta">#<span class="meta-keyword">define</span> uint unsigned int</span></span><br><span class="line"></span><br><span class="line"><span class="function"><span class="keyword">void</span> <span class="title">delayms</span><span class="params">(uint n)</span></span></span><br><span class="line"><span class="function"></span>&#123;</span><br><span class="line">	<span class="keyword">for</span> (<span class="keyword">int</span> i = <span class="number">0</span>; i &lt; n; i++)</span><br><span class="line">		<span class="keyword">for</span> (<span class="keyword">int</span> j = <span class="number">0</span>; j &lt; <span class="number">536</span>; j++);</span><br><span class="line"></span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<blockquote class="blockquote-center"><p><strong>io_init.c</strong> </p>
+</blockquote>
+<figure class="highlight c"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">#<span class="meta-keyword">include</span> <span class="meta-string">&lt;ioCC2530.h&gt;</span></span></span><br><span class="line"><span class="comment">/*按键初始化函数*/</span></span><br><span class="line"><span class="function"><span class="keyword">void</span> <span class="title">io_init</span><span class="params">()</span></span></span><br><span class="line"><span class="function"></span>&#123;</span><br><span class="line">  <span class="comment">//P0.4,P0.5设为通用I/O输出</span></span><br><span class="line">  P0SEL &amp;= ~<span class="number">0x10</span>; </span><br><span class="line">  <span class="comment">//按键在P04，P05设为输入</span></span><br><span class="line">  P0DIR &amp;= ~<span class="number">0x10</span>;  </span><br><span class="line">  <span class="comment">//P0.4，P0.5为三态</span></span><br><span class="line">  P0INP |= <span class="number">0x30</span>;  </span><br><span class="line">&#125;</span><br><span class="line"><span class="comment">/*LED初始化*/</span></span><br><span class="line"><span class="function"><span class="keyword">void</span> <span class="title">Initial</span><span class="params">()</span></span></span><br><span class="line"><span class="function"></span>&#123;     </span><br><span class="line">  P1SEL&amp;=~<span class="number">0XE0</span>;</span><br><span class="line"><span class="comment">//P15、P16、P17定义为输出</span></span><br><span class="line">P1DIR |= <span class="number">0xe0</span>; </span><br><span class="line"></span><br><span class="line">P0SEL&amp;=~<span class="number">0X20</span>;</span><br><span class="line"><span class="comment">//P05定义为输出</span></span><br><span class="line">P0DIR |= <span class="number">0x20</span>;</span><br><span class="line">P1_5=<span class="number">1</span>;</span><br><span class="line">P1_6=<span class="number">1</span>;</span><br><span class="line">P1_7=<span class="number">1</span>;</span><br><span class="line">P0_5=<span class="number">1</span>;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<blockquote class="blockquote-center"><p><strong>m_state.c</strong> </p>
+</blockquote>
 <figure class="highlight c"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br><span class="line">44</span><br><span class="line">45</span><br><span class="line">46</span><br><span class="line">47</span><br><span class="line">48</span><br><span class="line">49</span><br><span class="line">50</span><br><span class="line">51</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">#<span class="meta-keyword">include</span> <span class="meta-string">"ioint.h"</span></span></span><br><span class="line"></span><br><span class="line"><span class="function">uint <span class="title">m_state</span><span class="params">(uint mode,uint state)</span></span></span><br><span class="line"><span class="function"></span>&#123;</span><br><span class="line">  <span class="keyword">if</span>(mode!=<span class="number">0</span>)</span><br><span class="line">  &#123;</span><br><span class="line">	<span class="keyword">switch</span> (state)</span><br><span class="line">	&#123;</span><br><span class="line">	<span class="keyword">case</span> <span class="number">0</span>:</span><br><span class="line">	&#123;</span><br><span class="line">		A = <span class="number">0</span>;B = <span class="number">1</span>;C = <span class="number">1</span>;D = <span class="number">1</span>;<span class="keyword">break</span>;</span><br><span class="line">	&#125;</span><br><span class="line">	<span class="keyword">case</span> <span class="number">1</span>:</span><br><span class="line">	&#123;</span><br><span class="line">		A = <span class="number">0</span>;B = <span class="number">0</span>;C = <span class="number">1</span>;D = <span class="number">1</span>;<span class="keyword">break</span>;</span><br><span class="line">	&#125;</span><br><span class="line">	<span class="keyword">case</span> <span class="number">2</span>:</span><br><span class="line">	&#123;</span><br><span class="line">		A = <span class="number">1</span>;B = <span class="number">0</span>;C = <span class="number">1</span>;D = <span class="number">1</span>;<span class="keyword">break</span>;</span><br><span class="line">	&#125;</span><br><span class="line">	<span class="keyword">case</span> <span class="number">3</span>:</span><br><span class="line">	&#123;</span><br><span class="line">		A = <span class="number">1</span>;B = <span class="number">0</span>;C = <span class="number">0</span>;D = <span class="number">1</span>;<span class="keyword">break</span>;</span><br><span class="line">	&#125;</span><br><span class="line">	<span class="keyword">case</span> <span class="number">4</span>:</span><br><span class="line">	&#123;</span><br><span class="line">		A = <span class="number">1</span>;B = <span class="number">1</span>;C = <span class="number">0</span>;D = <span class="number">1</span>;<span class="keyword">break</span>;</span><br><span class="line">	&#125;</span><br><span class="line">	<span class="keyword">case</span> <span class="number">5</span>:</span><br><span class="line">	&#123;</span><br><span class="line">		A = <span class="number">1</span>;B = <span class="number">1</span>;C = <span class="number">0</span>;D = <span class="number">0</span>;<span class="keyword">break</span>;</span><br><span class="line">	&#125;</span><br><span class="line">	<span class="keyword">case</span> <span class="number">6</span>:</span><br><span class="line">	&#123;</span><br><span class="line">		A = <span class="number">1</span>;B = <span class="number">1</span>;C = <span class="number">1</span>;D = <span class="number">0</span>;<span class="keyword">break</span>;</span><br><span class="line">	&#125;</span><br><span class="line">	<span class="keyword">case</span> <span class="number">7</span>:</span><br><span class="line">	&#123;</span><br><span class="line">		A = <span class="number">0</span>;B = <span class="number">1</span>;C = <span class="number">1</span>;D = <span class="number">0</span>;<span class="keyword">break</span>;</span><br><span class="line">	&#125;</span><br><span class="line">	<span class="keyword">default</span>:</span><br><span class="line">		A = <span class="number">1</span>;B = <span class="number">1</span>;C = <span class="number">1</span>;D = <span class="number">1</span>;</span><br><span class="line">        mode = <span class="number">0</span>;<span class="keyword">break</span>;</span><br><span class="line">	&#125;</span><br><span class="line">  &#125;</span><br><span class="line"> <span class="keyword">else</span></span><br><span class="line"> &#123;</span><br><span class="line">   A=<span class="number">1</span>;B=<span class="number">1</span>;C=<span class="number">1</span>;D=<span class="number">1</span>;</span><br><span class="line"> &#125;</span><br><span class="line">    <span class="keyword">return</span> mode;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
-<div class="note info"><p><strong>motor.c</strong> </p></div>
+<blockquote class="blockquote-center"><p><strong>motor.c</strong> </p>
+</blockquote>
 <figure class="highlight c"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">#<span class="meta-keyword">include</span> <span class="meta-string">"ioint.h"</span></span></span><br><span class="line"></span><br><span class="line"><span class="function">uint <span class="title">motor</span><span class="params">(uint mode,uint state)</span></span></span><br><span class="line"><span class="function"></span>&#123;</span><br><span class="line">	<span class="keyword">switch</span> (mode)</span><br><span class="line">	&#123;</span><br><span class="line">	<span class="keyword">case</span> <span class="number">1</span>:		</span><br><span class="line">		state++;</span><br><span class="line">		<span class="keyword">if</span> (state &gt;= <span class="number">8</span>)</span><br><span class="line">			state = <span class="number">0</span>;</span><br><span class="line">		<span class="keyword">break</span>;</span><br><span class="line">	<span class="keyword">case</span> <span class="number">2</span>:</span><br><span class="line">		<span class="keyword">if</span> (state == <span class="number">0</span>)</span><br><span class="line">			state = <span class="number">8</span>;</span><br><span class="line">		state--;</span><br><span class="line">                <span class="keyword">break</span>;</span><br><span class="line">	<span class="keyword">default</span>:</span><br><span class="line">		<span class="keyword">break</span>;</span><br><span class="line">	&#125;</span><br><span class="line">     <span class="keyword">return</span> state;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<blockquote class="blockquote-center"><p><strong>main1.c</strong> </p>
+</blockquote>
+<figure class="highlight c"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">#<span class="meta-keyword">include</span> <span class="meta-string">"ioint.h"</span></span></span><br><span class="line"><span class="meta">#<span class="meta-keyword">include</span> <span class="meta-string">&lt;ioCC2530.h&gt;</span></span></span><br><span class="line"></span><br><span class="line">uint mode=<span class="number">1</span>;</span><br><span class="line">uint state=<span class="number">3</span>;</span><br><span class="line"></span><br><span class="line"><span class="function"><span class="keyword">void</span> <span class="title">main</span><span class="params">()</span></span></span><br><span class="line"><span class="function"></span>&#123;</span><br><span class="line">  io_init();</span><br><span class="line">  Initial();</span><br><span class="line">  </span><br><span class="line">	<span class="keyword">while</span> (<span class="number">1</span>)</span><br><span class="line">	&#123;</span><br><span class="line">		mode=keyscan(mode);</span><br><span class="line">                mode=m_state(mode,state);</span><br><span class="line">		state=motor(mode,state);</span><br><span class="line">                delayms(<span class="number">2</span>);</span><br><span class="line">	&#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
 <p><img src="https://s2.ax1x.com/2019/07/15/Z7VXb6.th.jpg" alt="步进电机" title="步进电机"></p>
 
       
@@ -603,6 +604,10 @@ undefined
           <span class="post-nav-divider"></span>
 
           <div class="post-nav-prev post-nav-item">
+            
+              <a href="/2019/07/16/基于CC2530在Nokia5510上显示DHT11数据/" rel="prev" title="基于CC2530在Nokia5510上显示DHT11数据">
+                基于CC2530在Nokia5510上显示DHT11数据 <i class="fa fa-chevron-right"></i>
+              </a>
             
           </div>
         </div>
@@ -696,7 +701,7 @@ undefined
               
                 <a href="/archives/">
               
-                  <span class="site-state-item-count">6</span>
+                  <span class="site-state-item-count">7</span>
                   <span class="site-state-item-name">日志</span>
                 </a>
               </div>
@@ -710,7 +715,7 @@ undefined
               
               <div class="site-state-item site-state-tags">
                 
-                  <span class="site-state-item-count">9</span>
+                  <span class="site-state-item-count">11</span>
                   <span class="site-state-item-name">标签</span>
                 
               </div>
@@ -877,7 +882,7 @@ var ap = new APlayer({
     
       <span class="post-meta-item-text">Site words total count&#58;</span>
     
-    <span title="Site words total count">7.4k</span>
+    <span title="Site words total count">13.3k</span>
   
 </div>
 
