@@ -130,7 +130,7 @@ var myapc=new APlayer_Controler({
 <meta property="og:locale" content="zh-Hans">
 <meta property="og:image" content="https://s2.ax1x.com/2019/07/15/Z7VRuq.jpg">
 <meta property="og:image" content="https://s2.ax1x.com/2019/07/15/Z7VXb6.th.jpg">
-<meta property="og:updated_time" content="2019-07-15T15:35:07.124Z">
+<meta property="og:updated_time" content="2019-07-15T15:43:39.135Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="基于CC2530驱动步进电机">
 <meta name="twitter:image" content="https://s2.ax1x.com/2019/07/15/Z7VRuq.jpg">
@@ -410,7 +410,7 @@ var myapc=new APlayer_Controler({
                   <span class="post-meta-item-text">字数统计&#58;</span>
                 
                 <span title="字数统计">
-                  362
+                  367
                 </span>
               
 
@@ -448,9 +448,80 @@ var myapc=new APlayer_Controler({
 
       
         <p><img src="https://s2.ax1x.com/2019/07/15/Z7VRuq.jpg"><br><a id="more"></a></p>
-<p>$$四相步进电机单双八拍驱动方式$$<br>| 端口 | 时刻1 | 时刻2 | 时刻3 | 时刻4 | 时刻5 | 时刻6 | 时刻7 | 时刻8 |<br>| — | :–: | —: | —: | —: | —: | —: | —: | —: |<br>| E | H | H | H | H | H | H | H | H |<br>| A | L | L | | | | | | L |<br>| B | | | L | L | L | | | |<br>| C | | | | | L | L | L | |<br>| D | | | | | | L | L | L |</p>
+<h3 id="四相步进电机单双八拍驱动方式"><a href="#四相步进电机单双八拍驱动方式" class="headerlink" title="四相步进电机单双八拍驱动方式"></a>四相步进电机单双八拍驱动方式</h3><table>
+<thead>
+<tr>
+<th>端口</th>
+<th style="text-align:center">时刻1</th>
+<th style="text-align:right">时刻2</th>
+<th style="text-align:right">时刻3</th>
+<th style="text-align:right">时刻4</th>
+<th style="text-align:right">时刻5</th>
+<th style="text-align:right">时刻6</th>
+<th style="text-align:right">时刻7</th>
+<th style="text-align:right">时刻8</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>E</td>
+<td style="text-align:center">H</td>
+<td style="text-align:right">H</td>
+<td style="text-align:right">H</td>
+<td style="text-align:right">H</td>
+<td style="text-align:right">H</td>
+<td style="text-align:right">H</td>
+<td style="text-align:right">H</td>
+<td style="text-align:right">H</td>
+</tr>
+<tr>
+<td>A</td>
+<td style="text-align:center">L</td>
+<td style="text-align:right">L</td>
+<td style="text-align:right"></td>
+<td style="text-align:right"></td>
+<td style="text-align:right"></td>
+<td style="text-align:right"></td>
+<td style="text-align:right"></td>
+<td style="text-align:right">L</td>
+</tr>
+<tr>
+<td>B</td>
+<td style="text-align:center"></td>
+<td style="text-align:right"></td>
+<td style="text-align:right">L</td>
+<td style="text-align:right">L</td>
+<td style="text-align:right">L</td>
+<td style="text-align:right"></td>
+<td style="text-align:right"></td>
+<td style="text-align:right"></td>
+</tr>
+<tr>
+<td>C</td>
+<td style="text-align:center"></td>
+<td style="text-align:right"></td>
+<td style="text-align:right"></td>
+<td style="text-align:right"></td>
+<td style="text-align:right">L</td>
+<td style="text-align:right">L</td>
+<td style="text-align:right">L</td>
+<td style="text-align:right"></td>
+</tr>
+<tr>
+<td>D</td>
+<td style="text-align:center"></td>
+<td style="text-align:right"></td>
+<td style="text-align:right"></td>
+<td style="text-align:right"></td>
+<td style="text-align:right"></td>
+<td style="text-align:right">L</td>
+<td style="text-align:right">L</td>
+<td style="text-align:right">L</td>
+</tr>
+</tbody>
+</table>
 <hr>
-<div class="note info"><p><strong>main1.c</strong> </p></div>
+<h3 id="各部分程序"><a href="#各部分程序" class="headerlink" title="各部分程序"></a>各部分程序</h3><div class="note info"><p><strong>main1.c</strong> </p></div>
 
 undefined
 
@@ -463,6 +534,7 @@ undefined
 <div class="note info"><p>ioint.h </p></div>
 <figure class="highlight c"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">#<span class="meta-keyword">include</span> <span class="meta-string">&lt;ioCC2530.h&gt;</span></span></span><br><span class="line"><span class="meta">#<span class="meta-keyword">define</span> uint unsigned int</span></span><br><span class="line"><span class="meta">#<span class="meta-keyword">define</span> uchar unsigned char</span></span><br><span class="line"><span class="meta">#<span class="meta-keyword">define</span> A P1_5</span></span><br><span class="line"><span class="meta">#<span class="meta-keyword">define</span> B P1_6</span></span><br><span class="line"><span class="meta">#<span class="meta-keyword">define</span> C P1_7</span></span><br><span class="line"><span class="meta">#<span class="meta-keyword">define</span> D P0_5</span></span><br><span class="line"><span class="meta">#<span class="meta-keyword">define</span> SW6 P0_4        </span></span><br><span class="line">   </span><br><span class="line"></span><br><span class="line"><span class="function"><span class="keyword">void</span> <span class="title">delayms</span><span class="params">(uint n)</span></span>;</span><br><span class="line"><span class="function"><span class="keyword">void</span> <span class="title">io_init</span><span class="params">()</span></span>;</span><br><span class="line"><span class="function"><span class="keyword">void</span> <span class="title">Initial</span><span class="params">()</span></span>;</span><br><span class="line"><span class="function">uint <span class="title">keyscan</span><span class="params">(uint mode)</span></span>;</span><br><span class="line"><span class="function">uint <span class="title">motor</span><span class="params">(uint state,uint motor_state)</span></span>;</span><br><span class="line"><span class="function">uint <span class="title">m_state</span><span class="params">(uint mode,uint state)</span></span>;</span><br></pre></td></tr></table></figure>
 <div class="note info"><p><strong>io_init.c</strong> </p></div>
+
 undefined
 
 <div class="note info"><p><strong>m_state.c</strong> </p></div>
@@ -591,8 +663,17 @@ undefined
       
 
       
+        <ul class="sidebar-nav motion-element">
+          <li class="sidebar-nav-toc sidebar-nav-active" data-target="post-toc-wrap">
+            文章目录
+          </li>
+          <li class="sidebar-nav-overview" data-target="site-overview-wrap">
+            站点概览
+          </li>
+        </ul>
+      
 
-      <section class="site-overview-wrap sidebar-panel sidebar-panel-active">
+      <section class="site-overview-wrap sidebar-panel">
         <div class="site-overview">
           <div class="site-author motion-element" itemprop="author" itemscope itemtype="http://schema.org/Person">
             
@@ -752,6 +833,22 @@ var ap = new APlayer({
         </div>
       </section>
 
+      
+      <!--noindex-->
+        <section class="post-toc-wrap motion-element sidebar-panel sidebar-panel-active">
+          <div class="post-toc">
+
+            
+              
+            
+
+            
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-3"><a class="nav-link" href="#四相步进电机单双八拍驱动方式"><span class="nav-number">1.</span> <span class="nav-text">四相步进电机单双八拍驱动方式</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#各部分程序"><span class="nav-number">2.</span> <span class="nav-text">各部分程序</span></a></li></ol></div>
+            
+
+          </div>
+        </section>
+      <!--/noindex-->
       
 
       
